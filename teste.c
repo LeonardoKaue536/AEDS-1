@@ -1,32 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Porcetimento da tabuada
+void tabuada(int n1){
+    for(int i = 1; i <= n1; i++){
+
+        for(int j = 1; j <= i; j++){
+            printf("%d\n", i*j);
+        }
+        
+    }
+}
+
+
 int main()
 {
-    //Declaração das variáveis
-    int horasex, horas, total;
+    //declaração das variáveis
+    float num;
 
-    //Receber as horas
-    printf("Digite as horas faltadas:\n");
-    scanf("%d", &horas);
-
-    //Receber as horas extras trabalhadas
-    printf("Digite as horas extras:\n");
-    scanf("%d", &horasex);
-
-    //Cálculo do total das horas e depois tranformadas em minutos
-    total = 60 * (horasex-(horas * 2 / 3));
-
-    //Verificar qual o prêmio
-    if(total < 600){
-        printf("Seu premio eh de R$100");
-    }else if(total < 1200){
-        printf("Seu premio eh de R$200");
-    }else if(total < 1800){
-        printf("Seu premio eh de R$300");
-    }else if(total < 2400){
-        printf("Seu premio eh de R$400");
-    }else{
-        printf("Seu premio eh de R$500");
-    }
+    //receber de um a nove
+    printf("um valor de 1 a 9:\n");
+    scanf("%f", &num);
+    
+    //chamada do procedimento
+    tabuada(num);
+    return 0;
 }
