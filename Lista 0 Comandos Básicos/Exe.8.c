@@ -14,8 +14,7 @@ int main(){
     b = c;
 
     //Mostra na tela o resultado
-    printf("%.2f\n%.2f", a, b);
-
+    printf("%.2f %.2f", a, b);
 
 
 
