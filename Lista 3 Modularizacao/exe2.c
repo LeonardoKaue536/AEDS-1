@@ -13,7 +13,6 @@ void mediasal(){
             conte++;
         }
     }
-
     media = media / conte;
 
     printf("A media de salario eh %.2f", media);
