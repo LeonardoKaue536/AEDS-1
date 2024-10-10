@@ -1,25 +1,39 @@
 #include <stdio.h>
 
-// Função recursiva para calcular a divisão usando subtrações sucessivas
-int divisao(int numerador, int denominador) {
-    // Caso base: se o numerador for menor que o denominador, a divisão é 0
-    if (numerador < denominador) {
-        return 0;
+// Função que calcula o fatorial de um número
+int fatorial(int n) {
+    int f = 1;
+    for (int i = 2; i <= n; i++) {
+        f *= i;
     }
-    // Caso recursivo: subtrai o denominador do numerador e conta 1 para a divisão
-    return 1 + divisao(numerador - denominador, denominador);
+    return f;
+}
+
+// Função que calcula o valor de S conforme a fórmula fornecida
+double calcularS(int N) {
+    double S = 1.0;  // O primeiro termo já é 1
+    for (int i = 1; i <= N; i++) {
+        S += 1.0 / fatorial(i);  // Soma os termos 1/i!
+    }
+    return S;
 }
 
 int main() {
-    int numerador, denominador;
+    int N;
 
-    // Lê os números do usuário
-    printf("Digite o numerador e o denominador: ");
-    scanf("%d %d", &numerador, &denominador);
+    // Leitura do valor de N
+    printf("Digite um valor inteiro positivo N: ");
+    scanf("%d", &N);
 
-    // Chama a função de divisão e exibe o resultado
-    int resultado = divisao(numerador, denominador);
-    printf("Resultado da divisão: %d\n", resultado);
+    // Verifica se N é positivo
+    if (N < 1) {
+        printf("N deve ser um número inteiro positivo.\n");
+        return 1;  // Encerra o programa com erro
+    }
+
+    // Calcula e exibe o resultado
+    double resultado = calcularS(N);
+    printf("O valor de S para N = %d é: %lf\n", N, resultado);
 
     return 0;
 }

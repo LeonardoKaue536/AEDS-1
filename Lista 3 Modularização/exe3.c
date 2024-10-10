@@ -8,7 +8,7 @@ void ordemcrescente(int n){
     //Repetição para o número de conjuntos
     for(int i = 1;i <= n; i++){
         //receber os valores de a b c
-        printf("Digite 3 valores:\n");
+        //printf("Digite 3 valores:\n");
         scanf("%d %d %d", &a, &b, &c);
 
         //colocar em ordem crescente
@@ -41,7 +41,7 @@ int main(){
     int n;
 
     //receber o valor de de n
-    printf("Digite quantos conjuntos:\n");
+    //printf("Digite quantos conjuntos:\n");
     scanf("%d", &n);
 
     ordemcrescente(n);

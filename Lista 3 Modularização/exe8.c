@@ -1,42 +1,50 @@
 #include <stdio.h>
-int numerador(int n){
-    //declaração das variáveis
-    int nume = 0;
-    //cálculo do numerador
-    for(int i = 1; i >= n; i++){
-        nume += (i + 1);
-    }
-    return nume;
+#include <math.h>
+
+//calculo do denominador
+double deno(int i)
+{
+    double den = 0;
+
+    den += (i+3);
+
+    return den;
 }
 
-int denominador(int n){
+//calculo do numerador
+double nume(int i)
+{
     //declaração das variáveis
-    int deno = 0;
-    //cálculo do denominador
-    for(int i = 1; i >= n; i++){
-        deno += (i + 3);
-    }
+    double num = 0;
 
-    return deno;
+    num = ((pow(i,2))+1);
+
+    return num;
 }
-float calculo(int n){
-    //declaração das variáveis
-    float s;
-    s = numerador(n)/denominador(n);
 
+//pegar o calculo total
+double calcular(int n)
+{
+    double s = 0, numerador, denominador;
+
+    for(int i = 1; i <= n; i++){
+        numerador = nume(i);
+        denominador = deno(i);
+
+        s += numerador / denominador;
+    }
 
     return s;
 }
 
-int main(){
-    //declaração das variáveis
+int main(void)
+{
+    //Declaração das variáveis
     int n;
 
-    //receber um valor n
-    printf("Digite um valor N:\n");
+    //digite o valor de n
     scanf("%d", &n);
 
-    printf("O valor é:%f\n", calculo(n));
-    
-    return 0;
+    //printar resultado
+    printf("%lf", calcular(n));
 }

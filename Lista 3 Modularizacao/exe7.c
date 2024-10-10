@@ -21,19 +21,19 @@ int main(){
     int i, n;
 
     //receber quantos números
-    printf("Digite quantos números");
+    //printf("Digite quantos números");
     scanf("%d", &n);
 
     for(int a = 0; a < n; a++){
         //Receber um número
-        printf("Digite um número:\n");
+        //printf("Digite um número:\n");
         scanf("%d", &i);
 
         //verifica se é negativo ou positivo
         if(negaposi(i) == true){
-            printf("Sim\n");
+            printf("SIM\n");
         }else{
-            printf("Nao\n");
+            printf("NAO\n");
         }
     }
     return 0;

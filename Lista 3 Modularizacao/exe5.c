@@ -5,7 +5,7 @@ void mediaalunos(int alu){
     float nota;
     
     for(int i = 0; i < alu; i++){
-        printf("Digite a media final do aluno:\n");
+       //printf("Digite a media final do aluno:\n");
         scanf("%f", &nota);
 
         if(nota <= 39){
@@ -29,7 +29,7 @@ void mediaalunos(int alu){
     //Declaração das variáveis
     int n;
     //Receber a quantidade de alunos
-    printf("Digite a quantidade de alunos:\n");
+    //printf("Digite a quantidade de alunos:\n");
     scanf("%d", &n);
 
     //chamada do procedimento
