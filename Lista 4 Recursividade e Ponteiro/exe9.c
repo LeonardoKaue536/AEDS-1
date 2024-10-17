@@ -14,7 +14,7 @@ int main(){
     
     int total, h, m, s;
 
-    printf("Digite o os segundos\n");
+    //printf("Digite o os segundos\n");
     scanf("%d", &total);
 
     convertehoras(total, &h ,&m, &s);

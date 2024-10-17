@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int contecasas(int num, int conte){
+int contecasas(double num, int conte){
     if(num < 10){
         //retorna o vaor quando chegar no último dígito
         return conte += 1;
@@ -16,14 +16,14 @@ int contecasas(int num, int conte){
 
 int main(){
     //declaração das variáveis
-    int num, conte = 0;
+    double num, conte = 0;
 
     //receber o número
-    printf("Digite um númeor inteiro:\n");
-    scanf("%d", &num);
+    //printf("Digite um númeor inteiro:\n");
+    scanf("%lf", &num);
 
     //Mostrar o resultado
-    printf("O número tem %d digitos\n", contecasas(num, conte));
+    printf("%d\n", contecasas(num, conte));
 
 
     return 0;

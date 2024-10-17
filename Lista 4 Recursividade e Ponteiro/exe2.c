@@ -22,11 +22,11 @@ int main(){
     int num, soma = 0;
 
     //receber o número
-    printf("Digite um númeor inteiro:\n");
+    //printf("Digite um númeor inteiro:\n");
     scanf("%d", &num);
 
     //Mostrar o resultado
-    printf("A soma dos digitos eh %d\n", somadosdigitos(num, soma));
+    printf("%d", somadosdigitos(num, soma));
 
 
     return 0;

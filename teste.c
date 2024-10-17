@@ -1,25 +1,33 @@
 #include <stdio.h>
 
-// Função recursiva para calcular a divisão usando subtrações sucessivas
-int divisao(int numerador, int denominador) {
-    // Caso base: se o numerador for menor que o denominador, a divisão é 0
-    if (numerador < denominador) {
-        return 0;
+// CODIGO 1
+int main()
+{
+    
+    int *ptr, i;
+    ptr = (int *)malloc(sizeof(int));
+    *ptr = 10;
+    for (i = 0; i < 5; i++)
+    {
+        *ptr = *ptr + 1;
     }
-    // Caso recursivo: subtrai o denominador do numerador e conta 1 para a divisão
-    return 1 + divisao(numerador - denominador, denominador);
+    printf("\nptr1 : %d", *ptr);
+    free(ptr);
+
+    programa2();
+    return 0;
 }
-
-int main() {
-    int numerador, denominador;
-
-    // Lê os números do usuário
-    printf("Digite o numerador e o denominador: ");
-    scanf("%d %d", &numerador, &denominador);
-
-    // Chama a função de divisão e exibe o resultado
-    int resultado = divisao(numerador, denominador);
-    printf("Resultado da divisão: %d\n", resultado);
-
+// CODIGO 2
+void programa2()
+{
+    int *ptr, i;
+    ptr = (int *)malloc(sizeof(int));
+    *ptr = 10;
+    for (i = 0; i < 5; i++)
+    {
+        ptr = ptr + 1;
+    }
+    printf("\n ptr 2: %p", ptr);
+    free(ptr);
     return 0;
 }

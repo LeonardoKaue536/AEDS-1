@@ -1,19 +1,20 @@
 #include <stdio.h>
 
-double serie(int n)
+float function(float n){
+    if(n == 1){
+        return 1;
+    }else{
+        return n*function(n-1);
+    }
+}
+
+float serie(int n)
 {
-    double total =  1;
-    int fat;
-    for(int i = 0;i < n; i++)
+    float total =  0;
+    for(int i = 1;i <= n; i++)
     {
-        fat = 1;
 
-        for(int j = 1;j <= i; i++)
-        {
-            fat = fat*j;
-        }
-
-        total += 1/fat;
+        total += (1/function(i));
 
     }
 
@@ -22,11 +23,12 @@ double serie(int n)
 
 int main()
 {
-    int n;
+    float n;
     
-    printf("Digite o um numero n\n");
-    scanf("%d", &n);
+    //printf("Digite o um numero n\n");
+    scanf("%f", &n);
 
-    printf("O resultado eh: %.2lf\n", serie(n));
+    printf("%.2f", serie(n));
 
+    return 0;
 }

@@ -20,11 +20,11 @@ int main(){
     int num, den;
 
     //receber o numerador e denominador
-    printf("Digite o numerador e denominador de uma divisao:\n");
+    //printf("Digite o numerador e denominador de uma divisao:\n");
     scanf("%d %d", &num, &den);
 
     //Mostrar o resultado na tela
-    printf("O resultado da divisao eh: %d\n",divisao(num, den));
+    printf("%d",divisao(num, den));
 
 
     return 0;
