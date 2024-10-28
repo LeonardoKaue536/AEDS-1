@@ -9,7 +9,7 @@ float mediaalunos(int n){
     //repetição para ler as notas
     for(int i = 0; i < n; i++){
         //receber a média
-        printf("Digite a sua média\n");
+        //printf("Digite a sua média\n");
         scanf("%f", &media);
 
         if(media >= 6){
@@ -29,11 +29,11 @@ int main(){
     int n;
 
     //receber quantos alunos
-    printf("Digite a quantidade de alunos:\n");
+    //printf("Digite a quantidade de alunos:\n");
     scanf("%d", &n);
 
     //Mostrar o resultado
-    printf("A media das notas dos alunos aprovados eh: %.1f\n", mediaalunos(n));
+    printf("%.1f\n", mediaalunos(n));
 
 
     return 0;

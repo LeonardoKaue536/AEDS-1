@@ -4,7 +4,7 @@ void triangulo(){
     float l1, l2, l3;
 
     //receber um valor para os lados
-    printf("Digite 3 valores para lados de um trianguo:\n");
+    //printf("Digite 3 valores para lados de um trianguo:\n");
     scanf("%f %f %f", &l1, &l2, &l3);
 
     //repetição até que apareça um número negativo
@@ -12,17 +12,17 @@ void triangulo(){
     { 
         if(l1 < l2 + l3 && l2 < l1 + l3 && l3 < l2 + l1){
             if(l1 == l2 && l2 == l3){
-                printf("Triangulo equilatero\n");
-            }else if((l1 == l2 || l2 == l3) && (l1 != l3 || l2 != l3)){
-                printf("Triangulo isoceles\n");
+                printf("TRIANGULO EQUILATERO\n");
+            }else if((l1 == l2 && l1 != l3)||(l3 == l1 && l2 != l3)){
+                printf("TRIANGULO ISOSCELES\n");
             }else{
-                printf("Triangulo escaleno\n");
+                printf("TRIANGULO ESCALENO\n");
             }
         }else{
-            printf("Nao tringulo\n");
+            printf("NÃO TRIANGULO\n");
         }
 
-        printf("Digite 3 valores para lados de um trianguo:\n");
+        //printf("Digite 3 valores para lados de um trianguo:\n");
         scanf("%f %f %f", &l1, &l2, &l3);
 
     }
