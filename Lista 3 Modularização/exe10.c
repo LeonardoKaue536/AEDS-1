@@ -6,7 +6,7 @@ void categoria(int n){
     //recepetição para colocara as idades
     for(int i = 0; i < n; i++){
         //receber a idade
-        printf("Digite sua idade:\n");
+        //printf("Digite sua idade:\n");
         scanf("%d", &idade);
 
         //Mostrar a categoria que pertence
@@ -31,7 +31,7 @@ int main(){
     int n;
 
     //receber quantos nadadores
-    printf("Digite quantos nadadores:\n");
+    //printf("Digite quantos nadadores:\n");
     scanf("%d", &n);
 
     categoria(n);

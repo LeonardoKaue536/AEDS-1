@@ -15,10 +15,17 @@ float serie(int n)
     {
 
         total += (1/function(i));
-
     }
-
-    return total;
+}
+//faz o fatorial de maneira recursiva
+double fatorial(int i)
+{
+    //caso base
+    if(i == 1) return 1;
+    //realiza o fatorial
+    else if(i >= 1){
+        return i * fatorial(i-1);
+    }
 }
 
 int main()
@@ -27,8 +34,6 @@ int main()
     
     //printf("Digite o um numero n\n");
     scanf("%f", &n);
-
-    printf("%.2f", serie(n));
 
     return 0;
 }
