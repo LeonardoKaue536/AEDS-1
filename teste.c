@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
+<<<<<<< Updated upstream
 int main()
 {
 
@@ -106,5 +107,32 @@ int main()
             break;
         }
     }
+=======
+int main() {
+    FILE *arq;
+    char caractere;
+
+    // Abre o arquivo para escrita (cria se não existir)
+    arq = fopen("arq.txt", "w");
+
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+
+    printf("Digite caracteres (0 para sair):\n");
+
+    // Lê e escreve caracteres até o usuário digitar '0'
+    do {
+        scanf("%c", &caractere);
+        fputc(caractere, arq);
+    } while (caractere != '0');
+
+    // Fecha o arquivo
+    fclose(arq);
+
+    printf("Dados gravados no arquivo.\n");
+
+>>>>>>> Stashed changes
     return 0;
 }
