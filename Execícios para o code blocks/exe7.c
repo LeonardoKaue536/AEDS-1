@@ -4,37 +4,43 @@
 
 int main()
 {
-    //declaração das variáveis
-    int vet[8], temp;
+    //Declaração das variáveis
+    int vet[8], i, j, z, num;
 
-    //zerar o vetor
-    for(int i = 0; i < 9; i++)
-    {
-        vet[i] = 0;
-    }
+    //Repetição para ordenar a medida que é colocado dos valores no vetor
 
-    //adicionar os números e ja colocalos em ordem crescente
     srand(time(NULL));
-
-    for (int j = 8; j > 0; j--)
+    for(i = 1; i <= 8; i++)
     {
-        vet[j]= rand()%16;
+        
+        //receber o numero
+        num = rand() % 51;
 
-        for(int i = 8; i < 1; i--)
+        //Verifica o numero anterior é menor
+        j = 1;
+        while(j < i && vet[j-1] < num)
         {
-            if(vet[i] < vet[i-1])
-            {
-                temp = vet[i];
-                vet[i] = vet[i-1];
-                vet[i-1] = temp;
-            }
+            j++;
         }
-    }
 
-    //mostrar o vetor
-    for(int i = 0; i < 8; i++)
+        //Passar o valores maiores para a direita
+        z = i;
+        while (z > j)
+        {
+            vet[z-1] = vet[z-2];
+            z--;
+        }
+
+        //Coloca o valor na posição correta
+        vet[j-1] = num;
+        
+    }
+    
+
+    //mostrar o vetor já ordenado
+    for(int u = 0; u < 8; u++)
     {
-        printf("%d ", vet[i]);
+        printf("%d ", vet[u]);
     }
     return 0;
 }
