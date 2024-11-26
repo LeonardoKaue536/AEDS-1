@@ -4,13 +4,16 @@
 int main()
 {
     //declaração das variáveis
-    int carc;
-    char a;
+    int carc = 0;
+    char caractere;
 
     FILE *arq1 = fopen("exe2.txt","r");
 
-    while( a != '\n'){
-        
+    while((caractere = fgetc(arq1)) != EOF){
+        if(caractere == 'a' || caractere == 'A')
+        {
+            carc++;
+        }
 
     }
 
