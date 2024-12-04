@@ -15,6 +15,7 @@ class pessoa
             cout<<"Nome: "<<nome<<endl;
             cout<<"Idade: "<<idade<<" anos"<<endl;
             cout<<"Altura: "<<tamanho<<" metros"<<endl;
+            cout<<endl;
         }
 
 };
