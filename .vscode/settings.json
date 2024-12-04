@@ -59,7 +59,8 @@
   "files.associations": {
     "stdio.h": "c",
     "stdlib.h": "c",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "iostream": "cpp"
   },
   "powermode.enabled": true,
   "editor.guides.bracketPairs": "active"
