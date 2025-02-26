@@ -38,7 +38,7 @@ int main()
     carros[2].mostrar();
 
     
-
+    delete[] carros;
 
     return 0;
 }
