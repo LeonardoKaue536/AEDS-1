@@ -8,7 +8,7 @@ public:
     int atual;
     int distancia;
     int restante;
-
+    
     void mostrar(){
         int restante = atual - (distancia/15);
         cout<<"Distância percorrida: "<<distancia<<endl;
